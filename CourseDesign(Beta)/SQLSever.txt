@@ -1,0 +1,46 @@
+//---以下为搭建学生选课系统的SQL脚本文件。只需运行一次，就可有完整的数据库表结构和初始记录。
+//-----------------------------------------------------------------------------------------
+
+//该脚本针对SQLserver；Oracle的SQL脚本类似，只需将将数据类型如varchar改为varchar2,int改为number等
+
+--table1: registerXU 登录表
+drop table registerXu;
+create table registerXu (id varchar(20),userName varchar(20),passWord varchar(20),identify varchar(20));
+insert into registerXu values('s001','xuliang','123','学生');
+insert into registerXu values('s002','xuliang2','1234','学生');
+insert into registerXu values('j001','jack','12345','学生');
+insert into registerXu values('001','user','user','学生');
+insert into registerXu values('z001','zlm','corejava','老师');
+--String sql = "select * from registerXu "
+--+ "where userName=? and passWord=? and identify=?";
+
+--table 2:Coursexx课程表
+drop table Coursexx;
+create table Coursexx(cno varchar(20) primary key,cname varchar(20),hour Int,
+grade Int,term varchar(20),isNeed varchar(20), selectedCount Int ,Max Int);
+insert into Coursexx values('c001','CoreJava',50,5,'201007','NoNecessary',0,50);
+insert into Coursexx values('c002','XML',20,2,'201008','NoNecessary',0,40);
+insert into Coursexx values('c003','HIBERNATE',20,4,'201008','NoNecessary',0,30);
+insert into Coursexx values('c004','SQL',20,4,'201006','NoNecessary',0,5);
+insert into Coursexx values('c005','JDBC',20,2,'201008','NoNecessary',0,3);
+insert into Coursexx values('c006','AJAX',20,2,'201010','NoNecessary',0,1);
+insert into Coursexx values('c007','JSP',100,8,'201009','NoNecessary',0,1
+--sql = "select cno,cname,hour,grade,term,isNeed from CourseXX where cname = ?"; 
+ 
+
+
+--table 3:学生表--
+drop table studentxx;
+create table studentxx(sid varchar(20),sname varchar(20) primary key,sex varchar(20),birthday varchar(20),
+className varchar(20), image varchar(20));
+insert into studentxx values('s001','xuliang','male','19901124','sd1003','good');
+insert into studentxx values('s002','xuliang2','male','19851124','sd0910','good');
+insert into studentxx values('j001','jack','male','19881124','sd1003','good');
+insert into studentxx values('001','user','male','19901124','sd1005','good');
+insert into studentxx values('s003','sisi','female','19880124','sd1007','good');
+insert into studentxx values('as003','crystal','female','19880124','asd1007','good');
+
+--table 4:choices学生选课表
+drop table choicesxx;
+create table choicesxx(
+sname varchar(20) references studentxx(sname),cno varchar(20) references coursexx(cno));
