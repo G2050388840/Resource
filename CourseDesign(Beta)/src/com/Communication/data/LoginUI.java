@@ -71,7 +71,7 @@ public class LoginUI extends JFrame
                     stm.setString(2,textPassword.getText());
                     rs = stm.executeQuery();
                     while (rs.next()) {
-                        new MainUI();
+                        new MainUI("maojingming","123456");
                     }
                 } catch (SQLException e1) {
                     e1.printStackTrace();
