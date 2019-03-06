@@ -80,7 +80,8 @@ public class LoginUI extends JFrame
         });
         btnRegister.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e)
+            {
                 new Register();
             }
         });
@@ -140,6 +141,10 @@ public class LoginUI extends JFrame
             JPanel panel = new JPanel();
             panel.setOpaque(false);
             this.add(panel);
+            if(textPassword.getText() != RePassword.getText())
+            {
+                JOptionPane.showInternalMessageDialog(this,"Please input the same password!",JOptionPane.OK_OPTION);
+            }
 
             btnRe = new JButton("注册");
             btnRe.setContentAreaFilled(false);

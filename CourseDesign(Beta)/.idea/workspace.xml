@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5580ce87-5ceb-4ee6-910e-3a3ae6c85901" name="Default Changelist" comment="" />
+    <list default="true" id="5580ce87-5ceb-4ee6-910e-3a3ae6c85901" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Communication/data/LoginUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Communication/data/LoginUI.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -9,15 +12,39 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1177924754">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.21" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="105" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="105" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/Communication/data/LoginUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+            <state relative-caret-position="240">
+              <caret line="145" column="93" selection-start-line="145" selection-start-column="93" selection-end-line="145" selection-end-column="93" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="class#1941:2788" />
+                <element signature="e#2941#2942#0" expanded="true" />
+                <element signature="e#2987#2988#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -26,7 +53,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Communication/data/MainUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
+            <state>
               <caret line="84" selection-start-line="84" selection-end-line="84" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -38,7 +65,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Communication/data/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
+            <state>
               <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
               <folding>
                 <element signature="e#283#284#0" expanded="true" />
@@ -56,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Communication/data/DBManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="20" column="46" lean-forward="true" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+            <state>
+              <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,7 +119,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="687" />
     <option name="width" value="913" />
     <option name="height" value="860" />
@@ -105,6 +132,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -128,7 +157,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -139,7 +167,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -158,7 +186,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MainUI">
+  <component name="RunManager" selected="Application.LoginUI">
     <configuration name="LoginUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.Communication.data.LoginUI" />
       <module name="CourseDesign" />
@@ -185,8 +213,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainUI" />
         <item itemvalue="Application.LoginUI" />
+        <item itemvalue="Application.MainUI" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +234,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19473007" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1092545" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -215,15 +243,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29475102" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29380053" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32974428" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3257066" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32210243" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32479784" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -261,33 +289,42 @@
       </map>
     </option>
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/RegisterUI.java" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/Communication/data/Sever/SearchUI.java">
+    <entry file="file://$PROJECT_DIR$/src/com/Communication/data/Sever/SearchUI.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/Communication/data/Sever/DeleteUI.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/Communication/data/Sever/ChooseUI.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/Communication/data/Search/searchAvaiblecourse.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/Communication/data/LoginUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        <state relative-caret-position="240">
+          <caret line="145" column="93" selection-start-line="145" selection-start-column="93" selection-end-line="145" selection-end-column="93" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#1941:2788" />
+            <element signature="e#2941#2942#0" expanded="true" />
+            <element signature="e#2987#2988#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Communication/data/Sever/DeleteUI.java">
+    <entry file="file://$PROJECT_DIR$/src/com/Communication/data/MainUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Communication/data/Sever/ChooseUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state>
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Communication/data/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
+        <state>
           <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
           <folding>
             <element signature="e#283#284#0" expanded="true" />
@@ -301,37 +338,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Communication/data/Search/searchAvaiblecourse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Communication/data/DBManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="20" column="46" lean-forward="true" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Communication/data/MainUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Communication/data/LoginUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+        <state>
+          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
