@@ -110,7 +110,7 @@ public class MainUI extends JFrame implements ActionListener
         }
 
         //判断该学生选修课已选课程的总学分是否小于6；
-        //无效操作2：如果已有选课记录，并且总学分大于6学分，该学生不能在选了。
+        //无效操作2：如果已有选课记录，并且总学分大于6学分，该学生不能再选了。
         PreparedStatement ps = null;
         sql = "select sum(grade) " + "from (select x.sname , x.cno,k.grade grade " + "from coursexx k join choicesxx x " + "on k.cno=x.cno and x.sname=?) result";
         String grade = null;
@@ -141,7 +141,7 @@ public class MainUI extends JFrame implements ActionListener
             return false;
         }
 
-        //无效操作3：课程该学生已经选择了某课程，则不能再选该课程了。
+        //无效操作3：该学生已经选择了某课程，则不能再选该课程了。
         sql = "select * from choicesxx where sname=? and cno=?";
         boolean flag = false;
         try
