@@ -193,16 +193,13 @@ public class MainUI extends JFrame implements ActionListener
             //如果该课程还有选择的名额，提示单项选课操作成功。
             if (RemainedCount > 0)
             {
-                // save studentId and courseId to student-course table.
-                // this.getUsrName();userInput
+                //保存学生学号和课程ID到学生选课表
                 sql = "insert into choicesxx values(?,?)";
                 ps = con.prepareStatement(sql);
                 ps.setString(1, this.getName());
                 ps.setString(2, userInput);
                 ps.executeUpdate();
-                JOptionPane.showMessageDialog(null, "选课成功： " + this.getName()
-                        + " 选了" + userInput + "." + "" + " 还有 " + RemainedCount
-                        + " 人可以选该课程。");
+                JOptionPane.showMessageDialog(null, "选课成功： " + this.getName() + " 选了" + userInput + "." + "" + " 还有 " + RemainedCount + " 人可以选该课程。");
 
                 // 更新课程中已选该课程的人数：即将可选该课程的人数减去1个人。
                 sql = "update CourseXX set selectedCount=selectedCount+1 where cno=?";
@@ -239,7 +236,7 @@ public class MainUI extends JFrame implements ActionListener
         System.out.println("selectedItem:" + selectedItem);
         String sql = null;
 
-        //按用户查询方式，如按课程名，课程ID或学时的查询进行处理；并在表格中实现结果
+        //按用户查询方式，如按课程名，课程ID或学时的查询进行处理，并在表格中显示结果
         try
         {
             if ("课程名".equals(selectedItem))
