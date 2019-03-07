@@ -33,7 +33,7 @@ public class MainUI extends JFrame implements ActionListener {
         this.pwd = pwd;
     }
 
-    //根据用户的时间，做出相应的反映
+    //根据用户的事件，做出相应的反映
     public void actionPerformed(ActionEvent e) {
         String str = e.getActionCommand();
         //清空结果显示区中的内容，如果有的话。
@@ -198,7 +198,7 @@ public class MainUI extends JFrame implements ActionListener {
         }
     }
 
-    //对用户查询课程信息，进行处理，并显示查询结果
+    //对用户查询课程信息进行处理，并显示查询结果
     public void searchAvailableCourse()
     {
         con = DBManager.getConnection();
@@ -275,7 +275,7 @@ public class MainUI extends JFrame implements ActionListener {
         JPanel jp11 = new JPanel();
         JPanel jp12 = new JPanel();
         JPanel jp13 = new JPanel();
-        JLabel jlSearch = new JLabel(" 学 生 选 课 系 统 ");
+        JLabel jlSearch = new JLabel(" 学 生 选 课 查 询 系 统 ");
         jp11.add(jlSearch);
         jcbSearch.addItem(new String("课程名"));
         jcbSearch.addItem(new String("课程ID"));

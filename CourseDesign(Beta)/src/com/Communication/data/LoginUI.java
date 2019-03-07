@@ -141,10 +141,6 @@ public class LoginUI extends JFrame
             JPanel panel = new JPanel();
             panel.setOpaque(false);
             this.add(panel);
-            if(textPassword.getText() != RePassword.getText())
-            {
-                JOptionPane.showInternalMessageDialog(this,"Please input the same password!",JOptionPane.OK_OPTION);
-            }
 
             btnRe = new JButton("注册");
             btnRe.setContentAreaFilled(false);
@@ -162,6 +158,10 @@ public class LoginUI extends JFrame
                         stm = conn.prepareStatement(sql);
                         stm.setString(1, textName.getText());
                         stm.setString(2, textPassword.getText());
+                        if(textPassword.getText() != RePassword.getText())
+                        {
+                            JOptionPane.showMessageDialog(null,"Please input the same password!");
+                        }
                         stm.execute();
                     }
                     catch(SQLException e1)
