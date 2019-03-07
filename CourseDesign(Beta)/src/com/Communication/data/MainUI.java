@@ -46,7 +46,7 @@ public class MainUI extends JFrame implements ActionListener
         if ("查询".trim().equals(str))
         {
             int k = 1;
-            while (k < 10)
+            while(k < 10)
             {
                 for (int i = 1; i < 7; i++)
                 {
@@ -140,6 +140,7 @@ public class MainUI extends JFrame implements ActionListener
             this.setVisible(false);
             return false;
         }
+
         //无效操作3：课程该学生已经选择了某课程，则不能再选该课程了。
         sql = "select * from choicesxx where sname=? and cno=?";
         boolean flag = false;
