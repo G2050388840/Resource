@@ -8,10 +8,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.logging.Logger;
 
 import com.Communication.data.DBManager;
 import com.Communication.data.User;
-import com.sun.javafx.image.BytePixelSetter;
 
 public class LoginUI extends JFrame
 {
@@ -23,7 +23,9 @@ public class LoginUI extends JFrame
     private JButton btnRegister;
     public LoginUI()
     {
-        this.setVisible(true);
+
+        ImageIcon bg = new ImageIcon(".\\image\\1.jpg");
+        Image img = bg.getImage();
         this.setLayout(new GridLayout(5,1));
         JPanel jp1 = new JPanel();
         JPanel jp2 = new JPanel();
@@ -40,11 +42,13 @@ public class LoginUI extends JFrame
         lblPassword = new JLabel("密    码:");
 
         textName = new JTextField(15);
+        textName.setSize(new Dimension(180,10));
         textName.setOpaque(false);
         jp1.add(lblName);
         jp1.add(textName);
 
         textPassword = new JPasswordField(15);
+        textPassword.setSize(new Dimension(180,10));
         textPassword.setOpaque(false);
         jp2.add(lblPassword);
         jp2.add(textPassword);
@@ -72,9 +76,11 @@ public class LoginUI extends JFrame
                     stm.setString(1, textName.getText());
                     stm.setString(2, textPassword.getText());
                     rs = stm.executeQuery();
-                    if (textName.getText() == null || textPassword.getText() == null )
+                    if (textName.getText().length() == 0 || textPassword.getText().length() == 0 )
                     {
                         JOptionPane.showMessageDialog(null,"Please input the username!");
+                        dispose();
+                        new LoginUI();
                     }
                     else if(rs.next())
                     {
@@ -86,8 +92,6 @@ public class LoginUI extends JFrame
                 } catch (SQLException e1) {
                     e1.printStackTrace();
                 }
-
-                setVisible(false);
             }
         });
         btnRegister.addActionListener(new ActionListener()
@@ -105,6 +109,8 @@ public class LoginUI extends JFrame
         this.add(jp3);
         this.add(jp4);
         this.add(jp5);
+        this.setVisible(true);
+        this.setIconImage(img);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(300,200);
