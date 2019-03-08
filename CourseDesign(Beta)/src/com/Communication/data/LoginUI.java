@@ -78,13 +78,15 @@ public class LoginUI extends JFrame
                     }
                     else if(rs.next())
                     {
-                        new MainUI("maojingming","123456");
+                        new MainUI(textName.getText(),textPassword.getText());
+                        conn.close();
                     }
                     else
                         JOptionPane.showMessageDialog(null,"Please input the right username/userpassword! ");
                 } catch (SQLException e1) {
                     e1.printStackTrace();
                 }
+
                 setVisible(false);
             }
         });

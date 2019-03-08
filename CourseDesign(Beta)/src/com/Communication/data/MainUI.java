@@ -359,11 +359,4 @@ public class MainUI extends JFrame implements ActionListener
         this.setSize(500, 600);
     }
 
-    //当某学生有效登录后，启动程序（将学生的登录信息也传过来，以便保存选课操作时使用）
-    public static void main(String[] args)
-    {
-        //String usrName = "xuliang";
-        //String passwrd = "123";
-        new MainUI(name, pwd);
-    }
 }
