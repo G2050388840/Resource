@@ -11,6 +11,7 @@ import java.sql.SQLException;
 
 import com.Communication.data.DBManager;
 import com.Communication.data.User;
+import com.sun.javafx.image.BytePixelSetter;
 
 public class LoginUI extends JFrame
 {
@@ -22,40 +23,41 @@ public class LoginUI extends JFrame
     private JButton btnRegister;
     public LoginUI()
     {
-        this.setUndecorated(true);
         this.setVisible(true);
-        this.setLayout(new FlowLayout());
+        this.setLayout(new GridLayout(5,1));
+        JPanel jp1 = new JPanel();
+        JPanel jp2 = new JPanel();
+        JPanel jp3 = new JPanel();
+        JPanel jp4 = new JPanel();
+        JPanel jp5 = new JPanel();
+        jp1.setLayout(new GridLayout(2,1));
+        jp2.setLayout(new GridLayout(2,1));
+        jp3.setLayout(new GridLayout(2,1));
+        jp4.setLayout(new GridLayout(2,1));
+        jp5.setLayout(new GridLayout(2,1));
+
         lblName = new JLabel("用户名:");
         lblPassword = new JLabel("密    码:");
+
         textName = new JTextField(15);
         textName.setOpaque(false);
-        this.add(lblName);
-        this.add(textName);
+        jp1.add(lblName);
+        jp1.add(textName);
 
         textPassword = new JPasswordField(15);
         textPassword.setOpaque(false);
-        this.add(lblPassword);
-        this.add(textPassword);
+        jp2.add(lblPassword);
+        jp2.add(textPassword);
 
         btnLogin = new JButton("登录");
         btnLogin.setContentAreaFilled(false);
-        this.add(btnLogin);
-
-        ImageIcon bg = new ImageIcon("C:\\Users\\Administrator\\Desktop\\CourseDesign(Beta)\\123.jpg");
-
-        Image im = Toolkit.getDefaultToolkit().getImage("C:\\Users\\Administrator\\Desktop\\CourseDesign(Beta)\\123.jpg");
-        JLabel imlable = new JLabel(bg);
-        imlable.setBounds(0,0,bg.getIconWidth(),bg.getIconHeight());
-        this.getLayeredPane().add(imlable,new Integer(Integer.MIN_VALUE));
-        JPanel jp = (JPanel)this.getContentPane();
-        jp.setOpaque(false);
-        JPanel panel = new JPanel();
-        panel.setOpaque(false);
-        this.add(panel);
+        btnLogin.setSize(90,20);
+        jp4.add(btnLogin);
 
         btnRegister = new JButton("注册");
         btnRegister.setContentAreaFilled(false);
-        this.add(btnRegister);
+        btnRegister.setSize(90,20);
+        jp5.add(btnRegister);
 
         btnLogin.addActionListener(new ActionListener() {
             @Override
@@ -68,27 +70,42 @@ public class LoginUI extends JFrame
                     conn = DBManager.getConnection();
                     stm = conn.prepareStatement(sql);
                     stm.setString(1, textName.getText());
-                    stm.setString(2,textPassword.getText());
+                    stm.setString(2, textPassword.getText());
                     rs = stm.executeQuery();
-                    while (rs.next()) {
+                    if (textName.getText() == null || textPassword.getText() == null )
+                    {
+                        JOptionPane.showMessageDialog(null,"Please input the username!");
+                    }
+                    else if(rs.next())
+                    {
                         new MainUI("maojingming","123456");
                     }
+                    else
+                        JOptionPane.showMessageDialog(null,"Please input the right username/userpassword! ");
                 } catch (SQLException e1) {
                     e1.printStackTrace();
                 }
+                setVisible(false);
             }
         });
-        btnRegister.addActionListener(new ActionListener() {
+        btnRegister.addActionListener(new ActionListener()
+        {
             @Override
             public void actionPerformed(ActionEvent e)
             {
+                dispose();
                 new Register();
             }
         });
 
+        this.add(jp1);
+        this.add(jp2);
+        this.add(jp3);
+        this.add(jp4);
+        this.add(jp5);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(240,90);
+        this.setSize(300,200);
         this.setResizable(false);
 
     }
@@ -110,29 +127,42 @@ public class LoginUI extends JFrame
         private JButton btnRe;
         Register()
         {
-            this.setUndecorated(true);
-            this.setLayout(new FlowLayout());
+            int width = 520;
+            int height = 240;
+            this.setLayout(new GridLayout(4,1));
+            JPanel jp1 = new JPanel();
+            JPanel jp2 = new JPanel();
+            JPanel jp3 = new JPanel();
+            JPanel jp4 = new JPanel();
+            jp1.setLayout(new GridLayout(2,2));
+            jp2.setLayout(new GridLayout(2,2));
+            jp3.setLayout(new GridLayout(2,2));
             lblName = new JLabel("用户名:");
             lblPassword = new JLabel("密    码:");
             lblRePassword = new JLabel("再次输入:");
 
             textName = new JTextField(15);
             textName.setOpaque(false);
-            this.add(lblName);
-            this.add(textName);
+            textName.setSize(new Dimension(300,10));
+            jp1.add(lblName);
+            jp1.add(textName);
 
             textPassword = new JPasswordField(15);
             textPassword.setOpaque(false);
-            this.add(lblPassword);
-            this.add(textPassword);
+            textPassword.setSize(new Dimension(300,10));
+            jp2.add(lblPassword);
+            jp2.add(textPassword);
 
             RePassword = new JPasswordField(15);
+            RePassword.setSize(new Dimension(300,10));
             RePassword.setOpaque(false);
-            this.add(lblRePassword);
-            this.add(RePassword);
+            jp3.add(lblRePassword);
+            jp3.add(RePassword);
 
-            ImageIcon bg = new ImageIcon("C:\\Users\\Administrator\\Desktop\\CourseDesign(Beta)\\123.jpg");
-            Image im = Toolkit.getDefaultToolkit().getImage("C:\\Users\\Administrator\\Desktop\\CourseDesign(Beta)\\123.jpg");
+            ImageIcon bg = new ImageIcon(".\\image\\1.jpg");
+            Image img = bg.getImage();
+            img = img.getScaledInstance(width,height,Image.SCALE_DEFAULT);
+            bg.setImage(img);
             JLabel imlable = new JLabel(bg);
             imlable.setBounds(0,0,bg.getIconWidth(),bg.getIconHeight());
             this.getLayeredPane().add(imlable,new Integer(Integer.MIN_VALUE));
@@ -140,15 +170,22 @@ public class LoginUI extends JFrame
             jp.setOpaque(false);
             JPanel panel = new JPanel();
             panel.setOpaque(false);
-            this.add(panel);
+            jp4.add(panel);
 
             btnRe = new JButton("注册");
             btnRe.setContentAreaFilled(false);
-            this.add(btnRe);
+            btnRe.setSize(new Dimension(90,20));
+            jp4.add(btnRe);
+            this.add(jp1);
+            this.add(jp2);
+            this.add(jp3);
+            this.add(jp4);
 
-            btnRe.addActionListener(new ActionListener() {
+            btnRe.addActionListener(new ActionListener()
+            {
                 @Override
-                public void actionPerformed(ActionEvent e) {
+                public void actionPerformed(ActionEvent e)
+                {
                     Connection conn = null;
                     PreparedStatement stm = null;
                     String sql = "insert into login(username,userpwd)" + "values(?,?)";
@@ -161,8 +198,15 @@ public class LoginUI extends JFrame
                         if(textPassword.getText() != RePassword.getText())
                         {
                             JOptionPane.showMessageDialog(null,"Please input the same password!");
+                            dispose();
+                            new Register();
                         }
-                        stm.execute();
+                        else
+                        {
+                            stm.execute();
+                            dispose();
+                            new LoginUI();
+                        }
                     }
                     catch(SQLException e1)
                     {
@@ -187,7 +231,7 @@ public class LoginUI extends JFrame
 
             this.setLocationRelativeTo(null);
             this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            this.setSize(260,120);
+            this.setSize(width,height);
             this.setResizable(false);
             this.setVisible(true);
         }

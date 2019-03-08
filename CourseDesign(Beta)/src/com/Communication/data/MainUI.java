@@ -354,6 +354,7 @@ public class MainUI extends JFrame implements ActionListener
         this.add(jp1);
         this.add(jp2);
         this.add(jp3);
+        this.setLocation(550,200);
         this.setVisible(true);
         this.setSize(500, 600);
     }

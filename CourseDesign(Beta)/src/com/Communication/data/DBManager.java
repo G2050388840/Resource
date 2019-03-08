@@ -18,7 +18,7 @@ public class DBManager
     private static void getInstance()
     {
         driver = "com.mysql.jdbc.Driver";
-        url = "jdbc:mysql://10.6.49.207/user";
+        url = "jdbc:mysql://127.0.0.1/user";
         try
         {
             Class.forName(driver);
