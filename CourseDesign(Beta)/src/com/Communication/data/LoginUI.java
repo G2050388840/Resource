@@ -85,10 +85,11 @@ public class LoginUI extends JFrame
                     else if(rs.next())
                     {
                         new MainUI(textName.getText(),textPassword.getText());
+                        dispose();
                         conn.close();
                     }
                     else
-                        JOptionPane.showMessageDialog(null,"Please input the right username/userpassword! ");
+                        JOptionPane.showMessageDialog(null,"Please input the right username/userpassword!");
                 } catch (SQLException e1) {
                     e1.printStackTrace();
                 }
@@ -200,9 +201,6 @@ public class LoginUI extends JFrame
                     try
                     {
                         conn = DBManager.getConnection();
-                        stm = conn.prepareStatement(sql);
-                        stm.setString(1, textName.getText());
-                        stm.setString(2, textPassword.getText());
                         if(textPassword.getText() != RePassword.getText())
                         {
                             JOptionPane.showMessageDialog(null,"Please input the same password!");
@@ -211,6 +209,9 @@ public class LoginUI extends JFrame
                         }
                         else
                         {
+                            stm = conn.prepareStatement(sql);
+                            stm.setString(1, textName.getText());
+                            stm.setString(2, textPassword.getText());
                             stm.execute();
                             dispose();
                             new LoginUI();
